@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AUTHENTICATION WITH DJANGO</title>
+</head>
+<body>
+    {% if login %}
+        <div>Logged In</div>
+        <div>Username: {{ email }}</div>
+        <div><a href="/logout">Log out</a></div>
+    {% else %}
+        <div>
+            <a href="/signup/">Sign Up</a>
+            <a href="/login/">Log in</a>
+        </div>
+    {% endif %}
+</body>
+</html>

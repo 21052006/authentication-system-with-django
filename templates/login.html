@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log in</title>
+</head>
+<body>
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+    <form action="/login/" method="POST"> {% csrf_token %}
+        <input type="email" name="email" required>
+        <input type="password" name="password" required>
+        <button>SUBMIT</button>
+    </form>
+</body>
+</html>

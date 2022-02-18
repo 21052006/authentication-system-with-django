@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign up</title>
+</head>
+<body>
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+    <form action="/signup/" method="POST" autocomplete="off"> {% csrf_token %}
+        <input type="text" name="full_name" placeholder="FULL NAME" required>
+        <input type="text" name="phone_number" placeholder="PHONE NUMBER" required>
+        <input type="email" name="email" placeholder="E-MAIL" required>
+        <input type="password" name="password" placeholder="PASSWORD" required>
+        <button>SUBMIT</button>
+    </form>
+</body>
+</html>
